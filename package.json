@@ -1,11 +1,41 @@
 {
   "name": "tauri-plugin-reactive-api",
   "version": "0.1.0",
-  "description": "Typed reactive state and streams across Tauri's Rust <-> JS boundary",
+  "description": "Typed reactive state, streams and frontend-to-Rust sinks for Tauri, with React, Vue, Angular, Svelte and RxJS integration",
+  "keywords": [
+    "tauri",
+    "tauri-plugin",
+    "reactive",
+    "state",
+    "state-management",
+    "observable",
+    "rxjs",
+    "signals",
+    "stream",
+    "ipc",
+    "react",
+    "vue",
+    "angular",
+    "svelte",
+    "typescript"
+  ],
   "license": "MIT OR Apache-2.0",
   "author": "Joseph R Quinn",
+  "homepage": "https://github.com/quinnjr/tauri-plugin-reactive#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quinnjr/tauri-plugin-reactive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quinnjr/tauri-plugin-reactive/issues"
+  },
   "type": "module",
-  "files": ["dist-js", "README.md", "LICENSE-MIT", "LICENSE-APACHE"],
+  "files": [
+    "dist-js",
+    "README.md",
+    "LICENSE-MIT",
+    "LICENSE-APACHE"
+  ],
   "types": "./dist-js/index.d.ts",
   "exports": {
     ".": {
@@ -37,9 +67,15 @@
     "vue": "^3.3.0"
   },
   "peerDependenciesMeta": {
-    "@angular/core": { "optional": true },
-    "react": { "optional": true },
-    "vue": { "optional": true }
+    "@angular/core": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@angular/core": "^22.3.0",

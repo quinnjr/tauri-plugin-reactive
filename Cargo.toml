@@ -4,10 +4,13 @@ version = "0.1.0"
 edition = "2021"
 authors = ["Joseph R Quinn"]
 rust-version = "1.90"
-description = "Typed reactive state and streams across Tauri's Rust <-> JS boundary, with automatic subscription cleanup"
+description = "Typed reactive state, streams and frontend-to-Rust sinks across Tauri's Rust <-> JS boundary, with per-source permissions and automatic cleanup"
 license = "MIT OR Apache-2.0"
-keywords = ["tauri", "tauri-plugin", "reactive", "observable", "stream"]
-categories = ["gui", "asynchronous"]
+repository = "https://github.com/quinnjr/tauri-plugin-reactive"
+documentation = "https://docs.rs/tauri-plugin-reactive"
+readme = "README.md"
+keywords = ["tauri", "tauri-plugin", "reactive", "ipc", "state"]
+categories = ["gui", "asynchronous", "web-programming"]
 links = "tauri-plugin-reactive"
 include = ["/src", "/permissions", "/build.rs", "/README.md", "/LICENSE-MIT", "/LICENSE-APACHE"]
 
