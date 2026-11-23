@@ -1,0 +1,27 @@
+{
+  "name": "reactive-example-svelte",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "svelte-check --tsconfig ./tsconfig.json --fail-on-warnings && vite build",
+    "tauri": "tauri",
+    "selftest": "node ../shared/scripts/selftest.mjs reactive-example-svelte",
+    "selftest:dev": "node ../shared/scripts/selftest.mjs reactive-example-svelte --dev"
+  },
+  "dependencies": {
+    "@reactive-examples/shared": "*",
+    "@tauri-apps/api": "^2.12.5",
+    "rxjs": "^7.8.2",
+    "tauri-plugin-reactive-api": "file:../.."
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tauri-apps/cli": "^2.12.6",
+    "svelte": "^5.59.1",
+    "svelte-check": "^4.7.8",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.8"
+  }
+}

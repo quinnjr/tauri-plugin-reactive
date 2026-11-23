@@ -1,0 +1,13 @@
+# `tauri dev` watches this whole repo (the plugin is a path dependency of the examples) and
+# rebuilds + restarts the app on any change. Only Rust changes should do that; the frontend has
+# its own dev server and HMR. Without this, Vite writing its cache into node_modules/.vite
+# restarts the app on first load.
+node_modules/
+dist/
+dist-js/
+.angular/
+guest-js/
+tests-js/
+examples/*/src/
+examples/shared/frontend/
+*.md

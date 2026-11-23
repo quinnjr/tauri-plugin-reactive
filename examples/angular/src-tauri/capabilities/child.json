@@ -1,0 +1,39 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "child",
+  "description": "Child windows: only what they use (the README's restrictive style, without reactive:default)",
+  "windows": [
+    "child-*"
+  ],
+  "permissions": [
+    "core:default",
+    {
+      "identifier": "reactive:allow-subscribe",
+      "allow": [
+        {
+          "source": "ticks"
+        }
+      ]
+    },
+    "reactive:allow-unsubscribe",
+    {
+      "identifier": "reactive:allow-get",
+      "allow": [
+        {
+          "source": "motd"
+        }
+      ]
+    },
+    {
+      "identifier": "reactive:allow-sink-open",
+      "allow": [
+        {
+          "source": "pointer"
+        }
+      ]
+    },
+    "reactive:allow-sink-push",
+    "reactive:allow-sink-close",
+    "reactive:allow-sink-abort"
+  ]
+}

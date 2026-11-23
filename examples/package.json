@@ -1,0 +1,14 @@
+{
+  "name": "tauri-plugin-reactive-examples",
+  "private": true,
+  "workspaces": ["shared/frontend", "react", "svelte", "vue", "angular"],
+  "scripts": {
+    "lib": "node shared/scripts/lib.mjs",
+    "selftest:react": "npm run selftest -w reactive-example-react",
+    "selftest:svelte": "npm run selftest -w reactive-example-svelte",
+    "selftest:vue": "npm run selftest -w reactive-example-vue",
+    "selftest:angular": "npm run selftest -w reactive-example-angular",
+    "selftest": "npm run selftest:react && npm run selftest:svelte && npm run selftest:vue && npm run selftest:angular",
+    "selftest:dev": "npm run selftest:dev -w reactive-example-react && npm run selftest:dev -w reactive-example-svelte && npm run selftest:dev -w reactive-example-vue && npm run selftest:dev -w reactive-example-angular"
+  }
+}

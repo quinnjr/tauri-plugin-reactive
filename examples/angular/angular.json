@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "newProjectRoot": "projects",
+  "cli": { "analytics": false },
+  "projects": {
+    "reactive-example-angular": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.json",
+            "styles": ["../shared/frontend/styles.css"]
+          },
+          "configurations": {
+            "production": { "outputHashing": "all" },
+            "development": { "optimization": false, "extractLicenses": false, "sourceMap": true }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "options": {
+            "port": 1420,
+            "prebundle": { "exclude": ["@reactive-examples/shared"] }
+          },
+          "configurations": {
+            "development": { "buildTarget": "reactive-example-angular:build:development" }
+          },
+          "defaultConfiguration": "development"
+        }
+      }
+    }
+  }
+}

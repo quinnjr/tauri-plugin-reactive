@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-sink-close"
+description = "Enables the sink_close command without any pre-configured scope."
+commands.allow = ["sink_close"]
+
+[[permission]]
+identifier = "deny-sink-close"
+description = "Denies the sink_close command without any pre-configured scope."
+commands.deny = ["sink_close"]

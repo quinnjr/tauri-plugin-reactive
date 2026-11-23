@@ -1,0 +1,27 @@
+{
+  "name": "reactive-example-vue",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -p tsconfig.json && vite build",
+    "tauri": "tauri",
+    "selftest": "node ../shared/scripts/selftest.mjs reactive-example-vue",
+    "selftest:dev": "node ../shared/scripts/selftest.mjs reactive-example-vue --dev"
+  },
+  "dependencies": {
+    "@reactive-examples/shared": "*",
+    "@tauri-apps/api": "^2.12.5",
+    "rxjs": "^7.8.2",
+    "tauri-plugin-reactive-api": "file:../..",
+    "vue": "^3.5.46"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.6",
+    "@vitejs/plugin-vue": "^6.0.11",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.8",
+    "vue-tsc": "^3.3.14"
+  }
+}

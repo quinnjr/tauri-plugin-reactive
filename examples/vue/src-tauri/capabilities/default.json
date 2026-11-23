@@ -1,0 +1,41 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Main window: every source, minus the ones denied below",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "core:default",
+    "core:webview:allow-create-webview-window",
+    "core:window:allow-destroy",
+    "reactive:default",
+    {
+      "identifier": "reactive:allow-subscribe",
+      "deny": [
+        {
+          "source": "admin*"
+        }
+      ]
+    },
+    {
+      "identifier": "reactive:allow-get",
+      "deny": [
+        {
+          "source": "admin*"
+        }
+      ]
+    },
+    {
+      "identifier": "reactive:allow-set",
+      "deny": [
+        {
+          "source": "admin*"
+        },
+        {
+          "source": "motd"
+        }
+      ]
+    }
+  ]
+}

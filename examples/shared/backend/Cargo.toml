@@ -1,0 +1,13 @@
+[package]
+name = "reactive-example-backend"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-reactive = { path = "../../..", features = ["typegen"] }
+ts-rs = "12"
+serde = { version = "1", features = ["derive"] }
+futures = "0.3"
+tokio = { version = "1", features = ["time"] }

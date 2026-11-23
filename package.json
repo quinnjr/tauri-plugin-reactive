@@ -1,0 +1,54 @@
+{
+  "name": "tauri-plugin-reactive-api",
+  "version": "0.1.0",
+  "description": "Typed reactive state and streams across Tauri's Rust <-> JS boundary",
+  "license": "MIT OR Apache-2.0",
+  "author": "Joseph R Quinn",
+  "type": "module",
+  "files": ["dist-js", "README.md", "LICENSE-MIT", "LICENSE-APACHE"],
+  "types": "./dist-js/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist-js/index.d.ts",
+      "import": "./dist-js/index.js"
+    },
+    "./react": {
+      "types": "./dist-js/react.d.ts",
+      "import": "./dist-js/react.js"
+    },
+    "./vue": {
+      "types": "./dist-js/vue.d.ts",
+      "import": "./dist-js/vue.js"
+    },
+    "./angular": {
+      "types": "./dist-js/angular.d.ts",
+      "import": "./dist-js/angular.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit",
+    "test": "vitest run"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=19",
+    "@tauri-apps/api": "^2.0.0",
+    "react": ">=18",
+    "vue": "^3.3.0"
+  },
+  "peerDependenciesMeta": {
+    "@angular/core": { "optional": true },
+    "react": { "optional": true },
+    "vue": { "optional": true }
+  },
+  "devDependencies": {
+    "@angular/core": "^22.3.0",
+    "@tauri-apps/api": "^2.12.5",
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "rxjs": "^7.8.2",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0",
+    "vue": "^3.5.46"
+  }
+}

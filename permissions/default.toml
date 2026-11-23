@@ -1,0 +1,21 @@
+"$schema" = "schemas/schema.json"
+
+[default]
+description = """
+Allows the windows this capability covers to subscribe to, read, write and push to every source the
+app registers. Other windows are unaffected: the allow-everything scopes are command scopes, which
+Tauri resolves per capability.
+
+Restrict it by adding deny scopes, e.g. `{ "identifier": "reactive:allow-set", "deny": [{ "source": "settings" }] }`,
+or build your own list from the `allow-*` command permissions plus `allow` scopes instead of this set.
+"""
+permissions = [
+  "allow-subscribe-all-sources",
+  "allow-get-all-sources",
+  "allow-set-all-sources",
+  "allow-sink-open-all-sources",
+  "allow-unsubscribe",
+  "allow-sink-push",
+  "allow-sink-close",
+  "allow-sink-abort",
+]

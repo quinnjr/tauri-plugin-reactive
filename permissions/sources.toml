@@ -1,0 +1,39 @@
+"$schema" = "schemas/schema.json"
+
+# Each of these grants one command *together with* an allow-everything scope. Because the scope is
+# attached to a permission that grants a command, Tauri resolves it as a command scope: it applies
+# only to the windows/webviews of the capability that includes it. (A scope-only permission would
+# be a *global* scope, which Tauri applies app-wide, to every window, whichever capability
+# granted it, so it can't be used to allow sources for one window only.)
+
+[[permission]]
+identifier = "allow-subscribe-all-sources"
+description = "Allows subscribing to every registered source (in the windows this capability covers)."
+commands.allow = ["subscribe"]
+
+[[permission.scope.allow]]
+source = "*"
+
+[[permission]]
+identifier = "allow-get-all-sources"
+description = "Allows reading every registered state (in the windows this capability covers)."
+commands.allow = ["get"]
+
+[[permission.scope.allow]]
+source = "*"
+
+[[permission]]
+identifier = "allow-set-all-sources"
+description = "Allows writing every registered writable state (in the windows this capability covers)."
+commands.allow = ["set"]
+
+[[permission.scope.allow]]
+source = "*"
+
+[[permission]]
+identifier = "allow-sink-open-all-sources"
+description = "Allows opening a writer to every registered sink (in the windows this capability covers)."
+commands.allow = ["sink_open"]
+
+[[permission.scope.allow]]
+source = "*"

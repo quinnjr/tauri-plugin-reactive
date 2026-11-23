@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-sink-abort"
+description = "Enables the sink_abort command without any pre-configured scope."
+commands.allow = ["sink_abort"]
+
+[[permission]]
+identifier = "deny-sink-abort"
+description = "Denies the sink_abort command without any pre-configured scope."
+commands.deny = ["sink_abort"]
