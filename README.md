@@ -105,7 +105,7 @@ them by name with full types.
 ```toml
 # src-tauri/Cargo.toml
 [dependencies]
-tauri-plugin-reactive = { git = "https://github.com/quinnjr/tauri-plugin-reactive" }
+tauri-plugin-reactive = { git = "https://github.com/quinnjr/tauri-plugin-reactive", branch = "main" }
 # once published:
 # tauri-plugin-reactive = "0.1"
 ```
@@ -124,12 +124,12 @@ fn main() {
 ### JavaScript / TypeScript
 
 ```sh
-npm install github:quinnjr/tauri-plugin-reactive
+npm install github:quinnjr/tauri-plugin-reactive#main
 # once published:
 # npm install tauri-plugin-reactive-api
 ```
 
-The package builds itself on install from git. The package name is `tauri-plugin-reactive-api`, with
+The package builds itself on install from git. `main` holds released code; `develop` (the default branch) is the next release in progress. The package name is `tauri-plugin-reactive-api`, with
 subpath exports for the adapters:
 
 | Import | Contents |
@@ -757,7 +757,7 @@ backend: renaming a source or changing a field in Rust becomes a type error at e
 
 ```toml
 [dependencies]
-tauri-plugin-reactive = { git = "https://github.com/quinnjr/tauri-plugin-reactive", features = ["typegen"] }
+tauri-plugin-reactive = { git = "https://github.com/quinnjr/tauri-plugin-reactive", branch = "main", features = ["typegen"] }
 ts-rs = "12"
 ```
 
@@ -965,6 +965,9 @@ npm run build             # emits dist-js/
 # End to end, all four frameworks
 cd examples && npm install && npm run selftest && npm run selftest:dev
 ```
+
+**Contributing:** the project uses git-flow (`develop` is the integration branch; PRs go there). See
+[CONTRIBUTING.md](CONTRIBUTING.md). AI coding agents: see [AGENTS.md](AGENTS.md).
 
 After changing `guest-js/`, run `npm run lib` in `examples/`. It rebuilds the client, reinstalls it
 into the examples, and clears the dev servers' dependency caches.
